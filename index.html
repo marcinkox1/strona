@@ -333,31 +333,21 @@
         AOS.init();
     </script>
     <script>
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-            event.preventDefault(); 
-        
-            var formData = new FormData(this);
-        
-            fetch("send_email.php", {
-                method: "POST",
-                body: formData
-            })
-            .then(response => response.text())
-            .then(data => {
-                if (data.trim() === "success") {
-                    document.getElementById("formMessage").textContent = "✅ Wiadomość została wysłana!";
-                    document.getElementById("formMessage").style.color = "green";
-                    document.getElementById("contactForm").reset();
-                } else {
-                    document.getElementById("formMessage").textContent = "❌ Wystąpił błąd. Spróbuj ponownie.";
-                    document.getElementById("formMessage").style.color = "red";
-                }
-            })
-            .catch(error => {
-                document.getElementById("formMessage").textContent = "❌ Wystąpił błąd.";
-                document.getElementById("formMessage").style.color = "red";
-            });
-        });
+    <form id="contactForm" action="https://formsubmit.co/marcin.w21@interia.pl" method="POST">
+    <input type="text" name="name" placeholder="Twoje imię" required>
+    <input type="email" name="email" placeholder="Twój email" required>
+    <textarea name="message" placeholder="Twoja wiadomość" required></textarea>
+    <button type="submit">Wyślij</button>
+</form>
+<p id="formMessage"></p>
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function() {
+        document.getElementById("formMessage").textContent = "✅ Wiadomość została wysłana!";
+        document.getElementById("formMessage").style.color = "green";
+    });
+</script>
+
         </script>
         
 </body>
