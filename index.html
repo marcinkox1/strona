@@ -314,34 +314,33 @@
         
      <section id="contact" class="container py-5" data-aos="fade-up">
     
-    
-    <form action="https://formspree.io/f/mnnpdweq" method="POST" id="contact-form">
-        <div class="mb-3">
-            <label for="name" class="form-label">Imię i nazwisko</label>
-            <input type="text" class="form-control" id="name" name="name" required>
-        </div>
-
-        <div class="mb-3">
-            <label for="email" class="form-label">Adres e-mail</label>
-            <input type="email" class="form-control" id="email" name="email" required>
-        </div>
-
-        <div class="mb-3">
-            <label for="message" class="form-label">Treść wiadomości</label>
-            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-        </div>
-
-        <div class="mb-3">
-            <label for="product" class="form-label">Czym jesteś zainteresowany?</label>
-            <input type="text" class="form-control" id="product" name="product" required>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Wyślij</button>
-    </form>
-
-    <div id="confirmation-message" style="display:none; text-align:center; margin-top: 20px;">
-        <p>Twoja wiadomość została wysłana! Odezwiemy się do Ciebie jak najszybciej.</p>
+    <form id="contact-form">
+    <div class="mb-3">
+        <label for="name" class="form-label">Imię i nazwisko</label>
+        <input type="text" class="form-control" id="name" name="name" required>
     </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label">Adres e-mail</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="message" class="form-label">Treść wiadomości</label>
+        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label for="product" class="form-label">Czym jesteś zainteresowany?</label>
+        <input type="text" class="form-control" id="product" name="product" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Wyślij</button>
+</form>
+
+<div id="confirmation-message" style="display:none; text-align:center; margin-top: 20px;">
+    <p>Twoja wiadomość została wysłana! Odezwiemy się do Ciebie jak najszybciej.</p>
+</div>
 
 <script>
     document.getElementById('contact-form').addEventListener('submit', function(event) {
@@ -366,7 +365,8 @@
         });
     });
 </script>
-</section>
+    </section>
+
 
     </section>
     
