@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 
+Sitemap: https://marcinkox1.github.io/mojastrona/sitemap.xml
