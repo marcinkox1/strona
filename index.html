@@ -335,42 +335,34 @@
             <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
         </div>
 
-        <!-- Co chcesz kupić i ile? -->
         <div class="mb-3">
-            <label for="product" class="form-label">Co chcesz kupić i ile?</label>
+            <label for="product" class="form-label">Czym jesteś zainteresowany?</label>
             <input type="text" class="form-control" id="product" name="product" required>
         </div>
 
-        <!-- Przycisk wyślij -->
         <button type="submit" class="btn btn-primary">Wyślij</button>
     </form>
 
-    <!-- Potwierdzenie wysłania -->
     <div id="confirmation-message" style="display:none; text-align:center; margin-top: 20px;">
         <p>Twoja wiadomość została wysłana! Odezwiemy się do Ciebie jak najszybciej.</p>
     </div>
 </section>
 
 <script>
-    // Zatrzymanie domyślnego wysyłania formularza i pokazanie komunikatu
     document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();  // Zapobiega wysyłaniu formularza
-        // Pokazuje potwierdzenie wysłania wiadomości
+        event.preventDefault();  
         document.getElementById('confirmation-message').style.display = 'block';
 
-        // Wysyłanie formularza przez Formspree
         var form = document.getElementById('contact-form');
         var formData = new FormData(form);
         
-        // Wysyłanie danych do Formspree
         fetch(form.action, {
             method: form.method,
             body: formData
         }).then(response => {
             if (response.ok) {
-                // Można dodać dodatkowe działania po udanym wysłaniu
+                alert('Do zobaczenia wkrótce');
             } else {
-                // Obsługa błędów
                 alert('Wystąpił problem z wysłaniem formularza. Proszę spróbować ponownie.');
             }
         }).catch(error => {
