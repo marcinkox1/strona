@@ -312,31 +312,14 @@
         </div>
         
         
-       <form id="contactForm" action="https://formsubmit.co/marcin.w21@interia.pl" method="POST">
-    <div class="mb-3">
-        <input type="text" class="form-control" name="name" placeholder="Imię i nazwisko" required>
-    </div>
-    <div class="mb-3">
-        <input type="email" class="form-control" name="email" placeholder="Email" required>
-    </div>
-    <div class="mb-3">
-        <textarea class="form-control" name="message" rows="4" placeholder="Twoja wiadomość" required></textarea>
-    </div>
-
-    <!-- Ukryte pola dla poprawnego działania -->
-    <input type="hidden" name="_captcha" value="false">  <!-- Wyłącza captcha -->
+     
+    </section>
     
-    <button type="submit" class="btn btn-primary">Wyślij</button>
-    <p id="formMessage" class="mt-2"></p>
-</form>
-
-<script>
-    document.getElementById("contactForm").addEventListener("submit", function() {
-        document.getElementById("formMessage").textContent = "✅ Wiadomość została wysłana!";
-        document.getElementById("formMessage").style.color = "green";
-    });
-</script>
-
+    <script>
+        AOS.init();
+    </script>
+    
+       
         
 </body>
 </html>
