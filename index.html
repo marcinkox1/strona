@@ -3,165 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GRILLPAL</title>
-    <link rel="icon" type="image/png" href="burning-tree_7364880.png" >
+    <meta name="description" content="GrillPal - najlepszy węgiel na rynku. Gwarantujemy jakość i najlepsze ceny! Sprawdź naszą ofertę.">
+    <meta name="keywords" content="węgiel, ekogroszek, opał, grillpal, najlepszy węgiel">
+    <meta name="author" content="GrillPal">
+    <title>GRILLPAL - Najlepszy Węgiel na Rynku</title>
+    <link rel="icon" type="image/png" href="burning-tree_7364880.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <style>
-       
-        .navbar-nav .nav-link {
-            font-size: 25px;
-            font-weight: bold;
-        }
-
-       
-        .btn-primary {
-            background-color: #d35400;
-            border-color: #b84300;
-        }
-
-        .btn-primary:hover {
-            background-color: #b84300;
-            border-color: #8c3200;
-        }
-
-       
-        .card img {
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        .card img.hover-img {
-            display: none;
-        }
-
-        .card:hover img.default-img {
-            display: none;
-        }
-
-        .card:hover img.hover-img {
-            display: block;
-        }
-
-        
-        h2 {
-            color: black;
-            text-align: center;
-            position: relative;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-        h3 {
-            color: white;
-            text-align: center;
-            position: relative;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-        h3::after {
-            content: "";
-            display: block;
-            width: 80%;
-            height: 4px;
-            background-color: #d35400;
-            margin: 5px auto 0;
-        }
-
-        h2::after {
-            content: "";
-            display: block;
-            width: 80%;
-            height: 4px;
-            background-color: #d35400;
-            margin: 5px auto 0;
-        }
-
-        
-        .contact-info {
-            text-align: center;
-            font-size: 1.2rem;
-            margin-top: 20px;
-        }
-
-        .contact-info a {
-            color: #d35400;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
+        body { font-family: Arial, sans-serif; }
+        .navbar-nav .nav-link { font-size: 20px; font-weight: bold; }
+        .btn-primary { background-color: #d35400; border-color: #b84300; }
+        .btn-primary:hover { background-color: #b84300; border-color: #8c3200; }
+        .hero { position: relative; width: 100%; height: 100vh; text-align: center; color: white; }
+        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0; transition: opacity 2s; }
+        .hero-bg.active { opacity: 1; }
+        .hero-content { position: relative; z-index: 2; }
+        .contact-info { text-align: center; font-size: 1.2rem; margin-top: 20px; }
     </style>
 </head>
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="logo.png" alt="Logo firmy" height="80">
-            </a>
+            <a class="navbar-brand" href="#"><img src="logo.png" alt="Logo firmy" height="80"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link text-white" href="#about">O nas</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#products">Produkty</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#contact">Kontakt</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">O nas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Produkty</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <style>
-       
-        .hero {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            overflow: hidden;
-        }
-    
-       
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            transition: opacity 2s ease-in-out; 
-            opacity: 0;
-        }
-    
-        
-        .hero-bg.active {
-            opacity: 1;
-        }
-    
-       
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        
-     
-   
-    </style>
     
     <header class="hero">
-        
-        <div class="hero-bg active" style="background-image: url('tło1.jpg');"></div>
-        <div class="hero-bg" style="background-image: url('tło2.jpg');"></div>
-        <div class="hero-bg" style="background-image: url('tło3.jpg');"></div>
-    
-      
+        <div class="hero-bg active" style="background-image: url('tlo1.jpg');"></div>
+        <div class="hero-bg" style="background-image: url('tlo2.jpg');"></div>
+        <div class="hero-bg" style="background-image: url('tlo3.jpg');"></div>
         <div class="hero-content">
             <h1 class="display-3 fw-bold">Najlepszy Węgiel na Rynku</h1>
             <p class="lead">Gwarantujemy jakość i najlepsze ceny</p>
@@ -169,222 +51,47 @@
         </div>
     </header>
     
+    <section id="contact" class="container py-5" data-aos="fade-up">
+        <h2>Kontakt</h2>
+        <form action="https://formspree.io/f/mqapqozr" method="POST" id="contact-form">
+            <div class="mb-3">
+                <label for="name" class="form-label">Imię i nazwisko</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Adres e-mail</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Treść wiadomości</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Wyślij</button>
+        </form>
+        <div id="confirmation-message" style="display:none; text-align:center; margin-top: 20px;">
+            <p>Twoja wiadomość została wysłana! Odezwiemy się do Ciebie jak najszybciej.</p>
+        </div>
+    </section>
+    
     <script>
         let currentIndex = 0;
         const backgrounds = document.querySelectorAll(".hero-bg");
-    
         function changeBackground() {
-            backgrounds[currentIndex].classList.remove("active"); 
-            currentIndex = (currentIndex + 1) % backgrounds.length; 
-            backgrounds[currentIndex].classList.add("active"); 
+            backgrounds[currentIndex].classList.remove("active");
+            currentIndex = (currentIndex + 1) % backgrounds.length;
+            backgrounds[currentIndex].classList.add("active");
         }
-    
-        setInterval(changeBackground, 7000); 
-    </script>
-    
-    <section id="about" class="container-fluid py-5 position-relative text-white" data-aos="fade-up">
-        <div class="position-absolute top-0 start-0 w-100 h-100 background-overlay"></div>
-    
-        <div class="row d-flex align-items-center position-relative z-2">
-            <div class="col-md-6 p-5">
-                <div class="p-4 bg-dark bg-opacity-50 rounded">
-                    <h3 class="fw-bold display-5">O nas</h3>
-                    <p class="fs-5">
-                        Jesteśmy liderem w branży dostawców węgla i ekogroszku w Polsce. Nasza firma od wielu lat 
-                        specjalizuje się w sprzedaży wysokiej jakości surowców opałowych, które charakteryzują się 
-                        wysoką wartością opałową i minimalną emisją zanieczyszczeń. Dostarczamy produkty zarówno dla 
-                        klientów indywidualnych, jak i dla dużych przedsiębiorstw oraz instytucji.
-                    </p>
-                    <p class="fs-5">
-                        Dbamy o środowisko, dlatego nasz ekogroszek i węgiel są testowane pod kątem jakości i ekologiczności. 
-                        Naszym celem jest dostarczanie taniego, wydajnego i ekologicznego opału do domów i firm w całej Polsce. 
-                        Współpracujemy z największymi kopalniami i dostawcami, co pozwala nam utrzymywać konkurencyjne ceny 
-                        i szybki czas realizacji zamówień.
-                    </p>
-                </div>
-            </div>
-    
-            <div class="col-md-6 d-flex justify-content-center">
-                <video class="video-responsive shadow-lg position-relative z-3" controls>
-                    <source src="WhatsApp Video 2025-03-20 at 17.32.09.mp4" type="video/mp4">
-                    Twoja przeglądarka nie obsługuje elementu wideo.
-                </video>
-            </div>
-        </div>
-    </section>
-    
-    <style>
-        #about {
-            background: url('tloooo.jpg') no-repeat center center;
-            background-size: cover;
-            position: relative;
-            z-index: 1;
-        }
-    
-        .background-overlay {
-            background: rgba(0, 0, 0, 0.6);
-            z-index: 1;
-        }
-    
-        .fw-bold {
-            font-weight: bold;
-        }
-        
-        .fs-5 {
-            font-size: 1.25rem;
-        }
-    
-        .video-responsive {
-            width: 50%;
-            max-width: 400px;
-            height: auto;
-            border-radius: 10px;
-        }
-    </style>
-    
-    
-    
-    <section id="products" class="container py-5" data-aos="fade-up">
-        <h2>Nasze produkty</h2>
-        <div class="row text-center">
-            <div class="col-md-3">
-                <div class="card shadow-lg">
-                    <img src="worek1.png" class="card-img-top default-img" alt="Węgiel premium">
-                    <img src="worek1bok.png" class="card-img-top hover-img" alt="Węgiel premium - hover">
-                    <div class="card-body">
-                        <h5 class="card-title">Węgiel Premium</h5>
-                        <p class="card-text">Wysokiej jakości węgiel kamienny. jest bardzo super i kazdy powinien go miec aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-                        <a href="#contact" class="btn btn-primary">Zamów</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card shadow-lg">
-                    <img src="worek2.png" class="card-img-top default-img" alt="Ekogroszek">
-                    <img src="worek2bok.png" class="card-img-top hover-img" alt="Ekogroszek - hover">
-                    <div class="card-body">
-                        <h5 class="card-title">Ekogroszek</h5>
-                        <p class="card-text">Ekologiczne i ekonomiczne paliwo.</p>
-                        <a href="#contact" class="btn btn-primary">Zamów</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card shadow-lg">
-                    <img src="worek3.png" class="card-img-top default-img" alt="Ekogroszek">
-                    <img src="worek3bok.png" class="card-img-top hover-img" alt="Ekogroszek - hover">
-                    <div class="card-body">
-                        <h5 class="card-title">Ekogroszek</h5>
-                        <p class="card-text">Ekologiczne i ekonomiczne paliwo.</p>
-                        <a href="#contact" class="btn btn-primary">Zamów</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card shadow-lg">
-                    <img src="worek4.png" class="card-img-top default-img" alt="Ekogroszek">
-                    <img src="worek4bok.png" class="card-img-top hover-img" alt="Ekogroszek - hover">
-                    <div class="card-body">
-                        <h5 class="card-title">Ekogroszek</h5>
-                        <p class="card-text">Ekologiczne i ekonomiczne paliwo.</p>
-                        <a href="#contact" class="btn btn-primary">Zamów</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    
-    <section id="contact" class="container py-5" data-aos="fade-up">
-        <h2>Kontakt</h2>
-      
-        <div style="display: flex; justify-content: center; align-items: center; height: 20vh;">
-            <div class="contact-info" style="display: flex; flex-direction: column; gap: 10px; text-align: left;">
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <img src="phone.png" alt="Telefon" style="width: 40px; height: 40px;">
-                    <span>Telefon: <a href="tel:+48123456789" style="font-weight: bold; color: #d35400; text-decoration: none;">+48 123 456 789</a></span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <img src="mail.png" alt="E-mail" style="width: 40px; height: 40px;">
-                    <span>E-mail: <a href="mailto:kontakt@grillpal.pl" style="font-weight: bold; color: #d35400; text-decoration: none;">kontakt@grillpal.pl</a></span>
-                </div>
-            </div>
-        </div>
-        
-        
-     <section id="contact" class="container py-5" data-aos="fade-up">
-    
- <section id="contact" class="container py-5" data-aos="fade-up">
-    <h2>Kontakt</h2>
-    
-    <!-- Formularz kontaktowy -->
-    <form action="https://formspree.io/f/mqapqozr" method="POST" id="contact-form">
-        <!-- Imię i nazwisko -->
-        <div class="mb-3">
-            <label for="name" class="form-label">Imię i nazwisko</label>
-            <input type="text" class="form-control" id="name" name="name" required>
-        </div>
+        setInterval(changeBackground, 7000);
 
-        <!-- Adres e-mail -->
-        <div class="mb-3">
-            <label for="email" class="form-label">Adres e-mail</label>
-            <input type="email" class="form-control" id="email" name="email" required>
-        </div>
-
-        <!-- Treść wiadomości -->
-        <div class="mb-3">
-            <label for="message" class="form-label">Treść wiadomości</label>
-            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-        </div>
-
-        <!-- Co chcesz kupić i ile? -->
-        <div class="mb-3">
-            <label for="product" class="form-label">Co chcesz kupić i ile?</label>
-            <input type="text" class="form-control" id="product" name="product" required>
-        </div>
-
-        <!-- Przycisk wyślij -->
-        <button type="submit" class="btn btn-primary">Wyślij</button>
-    </form>
-
-    <!-- Potwierdzenie wysłania -->
-    <div id="confirmation-message" style="display:none; text-align:center; margin-top: 20px;">
-        <p>Twoja wiadomość została wysłana! Odezwiemy się do Ciebie jak najszybciej.</p>
-    </div>
-</section>
-
-<script>
-    // Zatrzymanie domyślnego wysyłania formularza i pokazanie komunikatu
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();  // Zapobiega wysyłaniu formularza
-        // Pokazuje potwierdzenie wysłania wiadomości
-        document.getElementById('confirmation-message').style.display = 'block';
-
-        // Wysyłanie formularza przez Formspree
-        var form = document.getElementById('contact-form');
-        var formData = new FormData(form);
-        
-        // Wysyłanie danych do Formspree
-        fetch(form.action, {
-            method: form.method,
-            body: formData
-        }).then(response => {
-            if (response.ok) {
-            } 
-    });
-</script>
-
-
-    </section>
-
-
-    </section>
-    
-    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('confirmation-message').style.display = 'block';
+            var form = document.getElementById('contact-form');
+            var formData = new FormData(form);
+            fetch(form.action, { method: form.method, body: formData })
+                .then(response => { if (response.ok) { form.reset(); } });
+        });
         AOS.init();
     </script>
-    
-       
-        
 </body>
 </html>
