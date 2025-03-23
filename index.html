@@ -315,21 +315,17 @@
      <section id="contact" class="container py-5" data-aos="fade-up">
     
     
-    <!-- Formularz kontaktowy -->
     <form action="https://formspree.io/f/mnnpdweq" method="POST" id="contact-form">
-        <!-- Imię i nazwisko -->
         <div class="mb-3">
             <label for="name" class="form-label">Imię i nazwisko</label>
             <input type="text" class="form-control" id="name" name="name" required>
         </div>
 
-        <!-- Adres e-mail -->
         <div class="mb-3">
             <label for="email" class="form-label">Adres e-mail</label>
             <input type="email" class="form-control" id="email" name="email" required>
         </div>
 
-        <!-- Treść wiadomości -->
         <div class="mb-3">
             <label for="message" class="form-label">Treść wiadomości</label>
             <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
@@ -346,9 +342,31 @@
     <div id="confirmation-message" style="display:none; text-align:center; margin-top: 20px;">
         <p>Twoja wiadomość została wysłana! Odezwiemy się do Ciebie jak najszybciej.</p>
     </div>
+
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+
+        fetch('https://formspree.io/f/mnnpdweq', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                // Jeśli formularz został wysłany pomyślnie, przekieruj na stronę z podziękowaniem
+                window.location.href = '/podziekowanie.html';  // Zmień na odpowiednią stronę
+            } else {
+                alert('Wystąpił problem podczas wysyłania wiadomości. Spróbuj ponownie.');
+            }
+        })
+        .catch(error => {
+            alert('Wystąpił problem podczas wysyłania wiadomości. Spróbuj ponownie.');
+        });
+    });
+</script>
 </section>
-
-
 
     </section>
     
