@@ -312,34 +312,24 @@
         </div>
         
         
-        <form id="contactForm" method="POST">
-            <div class="mb-3">
-                <input type="text" class="form-control" name="name" placeholder="Imię i nazwisko" required>
-            </div>
-            <div class="mb-3">
-                <input type="email" class="form-control" name="email" placeholder="Email" required>
-            </div>
-            <div class="mb-3">
-                <textarea class="form-control" name="message" rows="4" placeholder="Twoja wiadomość" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Wyślij</button>
-            <p id="formMessage" class="mt-2"></p>
-        </form>
-        
-    </section>
+       <form id="contactForm" action="https://formsubmit.co/marcin.w21@interia.pl" method="POST">
+    <div class="mb-3">
+        <input type="text" class="form-control" name="name" placeholder="Imię i nazwisko" required>
+    </div>
+    <div class="mb-3">
+        <input type="email" class="form-control" name="email" placeholder="Email" required>
+    </div>
+    <div class="mb-3">
+        <textarea class="form-control" name="message" rows="4" placeholder="Twoja wiadomość" required></textarea>
+    </div>
+
+    <!-- Ukryte pola dla lepszego działania -->
+    <input type="hidden" name="_captcha" value="false"> 
+    <input type="hidden" name="_next" value="https://twoja-strona.github.io/dziekujemy.html">
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        AOS.init();
-    </script>
-    <script>
-    <form id="contactForm" action="https://formsubmit.co/marcin.w21@interia.pl" method="POST">
-    <input type="text" name="name" placeholder="Twoje imię" required>
-    <input type="email" name="email" placeholder="Twój email" required>
-    <textarea name="message" placeholder="Twoja wiadomość" required></textarea>
-    <button type="submit">Wyślij</button>
+    <button type="submit" class="btn btn-primary">Wyślij</button>
+    <p id="formMessage" class="mt-2"></p>
 </form>
-<p id="formMessage"></p>
 
 <script>
     document.getElementById("contactForm").addEventListener("submit", function() {
@@ -348,7 +338,6 @@
     });
 </script>
 
-        </script>
         
 </body>
 </html>
