@@ -353,7 +353,8 @@
             body: formData
         })
         .then(response => {
-            if (response.ok) {
+                if (response.ok) {
+                console.log('Formularz wysłany pomyślnie');
                 window.location.href = 'https://marcinkox1.github.io/mojastrona/podziekowania.html';  
             } else {
                 alert('Wystąpił problem podczas wysyłania wiadomości. Spróbuj ponownie.');
