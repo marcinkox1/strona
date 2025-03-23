@@ -314,56 +314,69 @@
         
      <section id="contact" class="container py-5" data-aos="fade-up">
     
-    <form id="contact-form">
-    <div class="mb-3">
-        <label for="name" class="form-label">Imię i nazwisko</label>
-        <input type="text" class="form-control" id="name" name="name" required>
+ <section id="contact" class="container py-5" data-aos="fade-up">
+    <h2>Kontakt</h2>
+    
+    <!-- Formularz kontaktowy -->
+    <form action="https://formspree.io/f/mnnpdweq" method="POST" id="contact-form">
+        <!-- Imię i nazwisko -->
+        <div class="mb-3">
+            <label for="name" class="form-label">Imię i nazwisko</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+
+        <!-- Adres e-mail -->
+        <div class="mb-3">
+            <label for="email" class="form-label">Adres e-mail</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+
+        <!-- Treść wiadomości -->
+        <div class="mb-3">
+            <label for="message" class="form-label">Treść wiadomości</label>
+            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+        </div>
+
+        <!-- Co chcesz kupić i ile? -->
+        <div class="mb-3">
+            <label for="product" class="form-label">Co chcesz kupić i ile?</label>
+            <input type="text" class="form-control" id="product" name="product" required>
+        </div>
+
+        <!-- Przycisk wyślij -->
+        <button type="submit" class="btn btn-primary">Wyślij</button>
+    </form>
+
+    <!-- Potwierdzenie wysłania -->
+    <div id="confirmation-message" style="display:none; text-align:center; margin-top: 20px;">
+        <p>Twoja wiadomość została wysłana! Odezwiemy się do Ciebie jak najszybciej.</p>
     </div>
-
-    <div class="mb-3">
-        <label for="email" class="form-label">Adres e-mail</label>
-        <input type="email" class="form-control" id="email" name="email" required>
-    </div>
-
-    <div class="mb-3">
-        <label for="message" class="form-label">Treść wiadomości</label>
-        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-    </div>
-
-    <div class="mb-3">
-        <label for="product" class="form-label">Czym jesteś zainteresowany?</label>
-        <input type="text" class="form-control" id="product" name="product" required>
-    </div>
-
-    <button type="submit" class="btn btn-primary">Wyślij</button>
-</form>
-
-<div id="confirmation-message" style="display:none; text-align:center; margin-top: 20px;">
-    <p>Twoja wiadomość została wysłana! Odezwiemy się do Ciebie jak najszybciej.</p>
-</div>
+</section>
 
 <script>
+    // Zatrzymanie domyślnego wysyłania formularza i pokazanie komunikatu
     document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Zapobiega przeładowaniu strony
+        event.preventDefault();  // Zapobiega wysyłaniu formularza
+        // Pokazuje potwierdzenie wysłania wiadomości
+        document.getElementById('confirmation-message').style.display = 'block';
 
-        const formData = new FormData(this);
-
-        fetch('https://formspree.io/f/mnnpdweq', {
-            method: 'POST',
+        // Wysyłanie formularza przez Formspree
+        var form = document.getElementById('contact-form');
+        var formData = new FormData(form);
+        
+        // Wysyłanie danych do Formspree
+        fetch(form.action, {
+            method: form.method,
             body: formData
-        })
-        .then(response => {
+        }).then(response => {
             if (response.ok) {
-                // Ukryj formularz
-                document.getElementById('contact-form').style.display = 'none';
-                // Pokaż komunikat o wysłaniu
-                document.getElementById('confirmation-message').style.display = 'block';
+                // Można dodać dodatkowe działania po udanym wysłaniu
             } else {
-                alert('Wystąpił problem podczas wysyłania wiadomości. Spróbuj ponownie.');
+                // Obsługa błędów
+                alert('Wystąpił problem z wysłaniem formularza. Proszę spróbować ponownie.');
             }
-        })
-        .catch(error => {
-            alert('Wystąpił problem podczas wysyłania wiadomości. Spróbuj ponownie.');
+        }).catch(error => {
+            alert('Wystąpił problem z wysłaniem formularza. Proszę spróbować ponownie.');
         });
     });
 </script>
