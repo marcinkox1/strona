@@ -1,1 +1,493 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="WkLJKY29VNiFhNlwzwdbnRSRlqgNiEcWmV0NpUKXR-A" />
+    <meta charset="UTF-8">
+    <title>GRILLPAL</title>
+    <link rel="icon" type="image/png" href="burning-tree_7364880.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    
+    <meta name="description" content="Kup wysokiej jakości węgiel i ekogroszek w świetnej cenie. Szybka dostawa!">
+    <meta name="keywords" content="węgiel, ekogroszek, opał, drewno opałowe, tani węgiel, najlepszy ekogroszek">
+    
+    <meta property="og:title" content="GRILLPAL – Najlepszy węgiel i ekogroszek">
+    <meta property="og:description" content="Kup najwyższej jakości węgiel i ekogroszek z dostawą!">
+    <meta property="og:image" content="URL_DO_OBRAZKA">
+    <meta property="og:url" content="https://grillpall.eu/">
+    <meta name="robots" content="index, follow">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://grillpall.eu/">
+<script>
+  if (location.hostname.includes("github.io")) {
+    window.location.href = "https://grillpall.eu";
+  }
+</script>
+
+    <style>
+       
+        .navbar-nav .nav-link {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+       
+        .btn-primary {
+            background-color: #d35400;
+            border-color: #b84300;
+        }
+
+        .btn-primary:hover {
+            background-color: #b84300;
+            border-color: #8c3200;
+        }
+
+       
+
+
+        
+        h2 {
+            color: black;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: white;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        h3::after {
+            content: "";
+            display: block;
+            width: 80%;
+            height: 4px;
+            background-color: #d35400;
+            margin: 5px auto 0;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 80%;
+            height: 4px;
+            background-color: #d35400;
+            margin: 5px auto 0;
+        }
+
+        
+        .contact-info {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        .contact-info a {
+            color: #d35400;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo firmy" height="80">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="#about">O nas</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#products">Produkty</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <style>
+       
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+    
+       
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: opacity 2s ease-in-out; 
+            opacity: 0;
+        }
+    
+        
+        .hero-bg.active {
+            opacity: 1;
+        }
+    
+       
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+     
+   
+    </style>
+    
+    <header class="hero">
+        
+        <div class="hero-bg active" style="background-image: url('tło1.jpg');"></div>
+        <div class="hero-bg" style="background-image: url('tło2.jpg');"></div>
+        <div class="hero-bg" style="background-image: url('tło3.jpg');"></div>
+    
+      
+        <div class="hero-content">
+            <h1 class="display-3 fw-bold">Najlepszy Węgiel na Rynku</h1>
+            <p class="lead">Gwarantujemy jakość i najlepsze ceny</p>
+            <a href="#products" class="btn btn-primary btn-lg">Zobacz ofertę</a>
+        </div>
+    </header>
+    
+    <script>
+        let currentIndex = 0;
+        const backgrounds = document.querySelectorAll(".hero-bg");
+    
+        function changeBackground() {
+            backgrounds[currentIndex].classList.remove("active"); 
+            currentIndex = (currentIndex + 1) % backgrounds.length; 
+            backgrounds[currentIndex].classList.add("active"); 
+        }
+    
+        setInterval(changeBackground, 7000); 
+    </script>
+    
+    <section id="about" class="container-fluid py-5 position-relative text-white" data-aos="fade-up">
+        <div class="position-absolute top-0 start-0 w-100 h-100 background-overlay"></div>
+    
+        <div class="row d-flex align-items-center position-relative z-2">
+            <div class="col-md-6 p-5">
+                <div class="p-4 bg-dark bg-opacity-50 rounded">
+                    <h3 class="fw-bold display-5">O nas</h3>
+                    <p class="fs-5">
+                        Jesteśmy firmą specjalizującą się w sprzedaży wysokiej jakości węgla drzewnego grillowego z Bieszczad.
+                        Nasz produkt cieszy się uznaniem zarówno wśród klientów indywidualnych, jak i w branży gastronomicznej.
+                        Zaopatrujemy liczne restauracje, lokale serwujące dania z grilla oraz hurtownie na terenie całej Polski.
+                        Dzięki starannie wyselekcjonowanym surowcom i tradycyjnym metodom wypalania, nasz węgiel charakteryzuje się długim czasem żarzenia,
+                        wysoką kalorycznością oraz minimalną ilością popiołu. To sprawia, że idealnie nadaje się do grillowania i profesjonalnego użytku.
+                    </p>
+                    <p class="fs-5">
+                     Węgiel drzewny oferowany przez naszą Firmę, jest wysokiej klasy produktem powstałym w procesie pirolizy drewna.
+                     Proces ten przebiega w retortach ogrzewanych z zewnątrz, jest więc w pełni ekologiczny i niemalże bezdymny. 
+                     Dzięki zastosowanej technologii powstały surowiec charakteryzuje się bardzo wysoką kalorycznością i doskonałą granulacją.
+                     Równie istotny jest brak frakcji popiołu oraz słabej jakości "przegrzanego" węgla będącego produktem spalania drewna w retortach klasycznych. 
+                     Jako surowiec do produkcji węgla drzewnego wykorzystujemy wyłącznie twarde gatunki drewna liściastego; głównie grab, buk, oraz innych drzew liściastych. 
+                     Produktem finalnym jest więc węgiel drzewny z drzew liściastych.
+                     <p><strong>Po procesie konfekcjonowania węgiel drzewny sprzedawany przez naszą Firmę spełnia parametry PN-EN 1860-2.</strong></p>
+                    </p>
+                </div>
+            </div>
+    
+            <div class="col-md-6 d-flex justify-content-center">
+                <video class="video-responsive shadow-lg position-relative z-3" controls>
+                    <source src="widio.mp4" type="video/mp4">
+                    Twoja przeglądarka nie obsługuje elementu wideo.
+                </video>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        #about {
+            background: url('tloooo.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            z-index: 1;
+        }
+    
+        .background-overlay {
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+    
+        .fw-bold {
+            font-weight: bold;
+        }
+        
+        .fs-5 {
+            font-size: 1.25rem;
+        }
+    
+        .video-responsive {
+            width: 50%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+    .footer {
+        background: linear-gradient(90deg, #e67e22, #d35400);
+        color: white;
+        text-align: center;
+        padding: 20px 10px;
+        font-size: 16px;
+        font-weight: bold;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        margin-top: 50px;
+    }
+
+
+  .position-relative {
+    position: relative;
+}
+
+.default-img, .hover-img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.position-relative:hover .hover-img {
+    opacity: 1;
+}
+
+.position-relative:hover .default-img {
+    opacity: 0;
+}
+
+    </style>
+    
+    
+    
+    <section id="products" class="container py-5" data-aos="fade-up">
+        <h2>Nasze produkty</h2>
+   <section class="container mt-5">
+    <div class="row text-center">
+        
+        <!-- Węgiel drzewny 10 kg -->
+        <div class="col-md-3">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="position-relative">
+                    <img src="worek1.png" class="card-img-top default-img rounded-top" alt="Węgiel premium">
+                    <img src="worek1bok.png" class="card-img-top hover-img rounded-top" alt="Węgiel premium - hover">
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-bold">Węgiel drzewny 10 kg</h5>
+                    <p class="card-text text-muted">Mieszanka twardego drewna buka, graba oraz innych drzew liściastych.</p>
+                    
+                    <ul class="list-unstyled text-start">
+                        <li>🔥 <strong>Bardzo dobrze trzyma temperaturę</strong></li>
+                        <li>⏳ <strong>Długo się pali</strong></li>
+                        <li>♻️ <strong>Ekologiczne opakowanie</strong></li>
+                        <li>🪵 <strong>Duże kawałki, bez nadmiernego pyłu</strong></li>
+                    </ul>
+
+                                <a href="#contact" class="btn btn-primary">Zamów</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Węgiel drzewny 5 kg -->
+        <div class="col-md-3">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="position-relative">
+                    <img src="worek3.png" class="card-img-top default-img rounded-top" alt="Ekogroszek">
+                    <img src="worek3bok.png" class="card-img-top hover-img rounded-top" alt="Ekogroszek - hover">
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-bold">Węgiel drzewny 5 kg</h5>
+                    <p class="card-text text-muted">Mieszanka twardego drewna buka, graba oraz innych drzew liściastych.</p>
+                    
+                    <ul class="list-unstyled text-start">
+                        <li>🔥 <strong>Bardzo dobrze trzyma temperaturę</strong></li>
+                        <li>⏳ <strong>Długo się pali</strong></li>
+                        <li>♻️ <strong>Ekologiczne opakowanie</strong></li>
+                        <li>🪵 <strong>Duże kawałki, bez nadmiernego pyłu</strong></li>
+                    </ul>
+
+                                <a href="#contact" class="btn btn-primary">Zamów</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Węgiel drzewny 2,5 kg -->
+        <div class="col-md-3">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="position-relative">
+                    <img src="worek2.png" class="card-img-top default-img rounded-top" alt="Ekogroszek">
+                    <img src="worek2bok.png" class="card-img-top hover-img rounded-top" alt="Ekogroszek - hover">
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-bold">Węgiel drzewny 2,5 kg</h5>
+                    <p class="card-text text-muted">Mieszanka twardego drewna buka, graba oraz innych drzew liściastych.</p>
+
+                    <ul class="list-unstyled text-start">
+                        <li>🔥 <strong>Bardzo dobrze trzyma temperaturę</strong></li>
+                        <li>⏳ <strong>Długo się pali</strong></li>
+                        <li>♻️ <strong>Ekologiczne opakowanie</strong></li>
+                        <li>🪵 <strong>Duże kawałki, bez nadmiernego pyłu</strong></li>
+                    </ul>
+
+                                <a href="#contact" class="btn btn-primary">Zamów</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Węgiel drzewny gastronomiczny 10 kg -->
+        <div class="col-md-3">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="position-relative">
+                    <img src="worek4.png" class="card-img-top default-img rounded-top" alt="Ekogroszek">
+                    <img src="worek4bok.png" class="card-img-top hover-img rounded-top" alt="Ekogroszek - hover">
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-bold">Węgiel restauracyjny 10kg</h5>
+                    <p class="card-text text-muted">Mieszanka buka oraz grabu, idealna do gastronomii.</p>
+
+                    <ul class="list-unstyled text-start">
+                        <li>🔥 <strong>Duże i średnie kawałki – stabilne spalanie</strong></li>
+                        <li>⏳ <strong>Długi czas żarzenia</strong></li>
+                        <li>🌡️ <strong>Wysoka temperatura spalania</strong></li>
+                        <li>🪵 <strong>Naturalna mieszanka buka i grabu</strong></li>
+                    </ul>
+
+                                <a href="#contact" class="btn btn-primary">Zamów</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    </section>
+    
+    
+    <section id="contact" class="container py-5" data-aos="fade-up">
+        <h2>Kontakt</h2>
+      
+        <div style="display: flex; justify-content: center; align-items: center; height: 20vh;">
+            <div class="contact-info" style="display: flex; flex-direction: column; gap: 10px; text-align: left;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <img src="phone.png" alt="Telefon" style="width: 40px; height: 40px;">
+                    <span>Telefon: <a href="tel:+48123456789" style="font-weight: bold; color: #d35400; text-decoration: none;">+48 886 605 001</a></span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <img src="mail.png" alt="E-mail" style="width: 40px; height: 40px;">
+                    <span>E-mail: <a href="mailto:kontakt@grillpal.pl" style="font-weight: bold; color: #d35400; text-decoration: none;">grillpal99@gmail.com</a></span>
+                </div>
+            </div>
+        </div>
+        
+        
+     <section id="contact" class="container py-5" data-aos="fade-up">
+    
+ <section id="contact" class="container py-5" data-aos="fade-up">
+    <h2>Formularz kontaktowy</h2>
+    
+    <!-- Formularz kontaktowy -->
+    <form action="https://formspree.io/f/mqapqozr" method="POST" id="contact-form">
+        <!-- Imię i nazwisko -->
+        <div class="mb-3">
+            <label for="name" class="form-label">Imię i nazwisko</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+
+        <!-- Adres e-mail -->
+        <div class="mb-3">
+            <label for="email" class="form-label">Adres e-mail</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+
+        <!-- Treść wiadomości -->
+        <div class="mb-3">
+            <label for="message" class="form-label">Treść wiadomości</label>
+            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Wyślij</button>
+    </form>
+
+    <div id="confirmation-message" style="display:none; text-align:center; margin-top: 20px;">
+        <p>Twoja wiadomość została wysłana! Odezwiemy się do Ciebie jak najszybciej.</p>
+    </div>
+</section>
+
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();  // Zapobiega wysyłaniu formularza
+        // Pokazuje potwierdzenie wysłania wiadomości
+        document.getElementById('confirmation-message').style.display = 'block';
+
+        // Wysyłanie formularza przez Formspree
+        var form = document.getElementById('contact-form');
+        var formData = new FormData(form);
+        
+        // Wysyłanie danych do Formspree
+        fetch(form.action, {
+            method: form.method,
+            body: formData
+        }).then(response => {
+            if (response.ok) {
+            } 
+    });
+</script>
+
+
+    </section>
+
+
+    </section>
+    
+    <script>
+        AOS.init();
+    </script>
+
+       
+<footer class="footer">
+    <div class="container">
+        <p>© 2025 <strong>GrillPall</strong> - Wszelkie prawa zastrzeżone</p>
+        <p>🔥 Zapraszamy do kontaktu w celu wycenienia zamówień i nawiązania współpracy!</p>
+        <p>📞 Oferujemy atrakcyjne warunki dla gastronomii, hurtowni oraz klientów indywidualnych.</p>
+        <p>📩 Skontaktuj się z nami, aby otrzymać indywidualną ofertę dopasowaną do Twoich potrzeb.</p>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>
 
